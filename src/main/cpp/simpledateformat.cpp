@@ -126,7 +126,7 @@ namespace log4cxx
                         size_t start = 0;
                         std::basic_ostringstream<wchar_t> os;
                         for(; valueIter != values.end(); valueIter++) {
-                            PUT_FACET(facet, os, &time, (wchar_t) wspec);
+                            PUT_FACET(facet, os, &time, wspec);
                             Transcoder::decode(os.str().substr(start), *valueIter);
                             start = os.str().length();
                             (*inc)(time, aprtime);

@@ -34,6 +34,7 @@ namespace log4cxx
 
         namespace helpers {
           class Pool;
+          LOG4CXX_LIST_DEF(ByteList, unsigned char);
 
           /**
           *   OutputStream implemented on top of std::vector
@@ -41,7 +42,6 @@ namespace log4cxx
           class LOG4CXX_EXPORT ByteArrayOutputStream : public OutputStream
           {
           private:
-                 LOG4CXX_LIST_DEF(ByteList, unsigned char);
                  ByteList array;
 
           public:
